@@ -27,7 +27,12 @@
 // var str = '  我是空格君   ';
 // var reg = /^\s+|\s+$/g;
 
-var a = 100+10;
-    var b = 100+'10';
-    console.log(a,b);
-
+// console.log(typeof NaN);
+let arrayLike  = {
+    0: 'tom',
+    1: '65',
+    2: '男',
+    'length': 3
+}
+let arr = Array.from(arrayLike);
+console.log(arr);

@@ -1,0 +1,36 @@
+# ES6
+##  Array.from()  
+将一个类数组对象或者可遍历对象转换成一个真正的数组  
+什么是类数组: 最基本的要求就是具有length属性的对象
+1. 将类数组对象转换成真正数组
+```js
+let arrayLike  = {
+    0: 'tom',
+    1: '65',
+    2: '男',
+    'length':3  // 必须要有'length'这个属性,否则转换后是一个长度为0的空数组 [] 
+}
+let arr = Array.from(arrayLike);
+console.log(arr);['tom','65','男',]
+
+let arrayLike = {
+    'name': 'tom', 
+    'age': '65',
+    'sex': '男',
+    'friends': ['jane','john','Mary'],
+    length: 4  //这里将'length'改为了length
+}
+let arr = Array.from(arrayLike)
+console.log(arr)  // [ undefined, undefined, undefined, undefined ]
+```
+* 要将一个类数组对象转换为一个真正的数组，必须具备以下条件：
+    1. 该类数组对象必须具有length属性，用于指定数组的长度。如果没有length属性，那么转换后的数组是一个空数组。
+    2. 该类数组对象的属性名必须为数值型或字符串型的数字
+　　ps: 该类数组对象的属性名可以加引号，也可以不加引号
+
+* 将set结构的数据转换为真正的数组
+```js
+let arr = [1,2,3,4,5];
+let set = new Set(arr);
+console.log(Array.from(set));
+```

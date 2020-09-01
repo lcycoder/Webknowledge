@@ -1,5 +1,36 @@
-
-
+# css
+## css的继承
+* 无继承的属性:
+    1. display : 规定元素应该生成的框的类型
+    2. 文本属性: 
+        1. vertical-align : 垂直文本对齐
+        2. text-decoration: 规定添加到文本的装饰
+        3. text-shadown: 文本阴影效果
+        4. white-space : 空白符的处理
+    3. 盒子模型的属性: width,height,margin,border,padding
+    4. 背景属性:background
+    5. 定位属性:float,clear,position,top,right,bottom,overflow,z-index
+* 有继承性的属性
+1. 字体系列属性font
+2. 文本系列属性text
+3. 元素可见性visibility
+4. 表格,列表,生成内容的布局属性
+5. 光标属性
+6. 页面样式
+7. 声音样式属性
+* 所有元素可以继承的属性
+1. 元素可见性:visibility
+2. 光标属性: cursor
+* 内联元素可以继承的属性
+1. 字体系列属性
+2. 除text-indent,text-align之外的文本系列属性
+* 块级元素可以继承的属性
+1. text-indent,text-align
+## 怪异盒子和标准盒子
+* 标准盒子 : 总宽度 = width + margin + padding + border  
+浏览器默认的模式 ( 标准盒: 设置的width就是内容区的宽度)
+* 怪异盒子 : 总宽度 = width + margin  
+标准模式下如果定义的DOCTYPE缺失，则在ie6、ie7、ie8下汇触发怪异模式。 ( 怪异盒: 设置的宽度包括内容区和padding及border)
 ## 常用元素默认margin和pdding
 // body的margin值
 firefox 20.0 ----------------------- body的margin为: margin:8px 8px 8px 8px; 
@@ -145,7 +176,7 @@ Opera 12.11 --------------------- form的margin为: margin:0 0 0 0;
 Safari 5.1 ------------------------- form的margin为: margin:0 0 0 0; 
 Google Chrome 27.0 --------- form的margin为: margin:0 0 0 0; 
 
-# BFC(block-level box)
+## BFC(block-level box)
 * 如何创建BFC
     1. float不是none
     2. position值不是relative和static
@@ -166,5 +197,16 @@ Google Chrome 27.0 --------- form的margin为: margin:0 0 0 0;
 
     6. 计算BFC的高度时，浮动元素也参与计算。(当发生高度坍塌时,可以给父元素添加overflow:hiddien解决,根据浮动元素也参与计算的规则,浮动元素也参与计算)
 
-# css预编译工具
+## css预编译工具
 * styles,sass,less 
+
+## em 和 rem
+* 两种都是可灵活拓展的单位,由浏览器转化为像素值,具体取决于设计中字体大小设置
+如果使用值1em或1rem,可以被浏览器翻译成从16px或160px或其他任意值
+* 二者区别
+当使用em单位时，像素值将是em值乘以使用em单位的元素的字体大小。(依据是font-size)
+* 重点理解:
+有一个比较普遍的误解，认为 em 单位是相对于父元素的字体大小。 事实上，根据W3标准 ，它们是相对于使用em单位的元素的字体大小。  
+父元素的字体大小可以影响 em 值，但这种情况的发生，纯粹是因为继承。  
+
+
