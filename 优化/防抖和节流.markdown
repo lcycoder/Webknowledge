@@ -1,0 +1,16 @@
+# 高性能滚动scroll及页面渲染优化
+* scroll事件本身会触发页面的重新渲染,同时scroll事件的handler又会高频度的触发,因此事件的handler内部
+不应该有复杂操作,例如DOM操作就不应该放在事件处理中
+针对此类高频度触发事件,介绍两种解决方法
+* 防抖 
+防抖技术是可以把多个顺序地调用合并成一次,也就是一定事件内,规定是事件被触发的次数
+```js
+//简单的防抖动函数
+function debounce(func,wait,immediate){
+    //定时器定量
+    var timeout
+    return function(){
+        
+    }
+}
+```

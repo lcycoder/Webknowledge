@@ -1,0 +1,8 @@
+#  数据类型转化
+* boolean
+    1. 没有内容就是undefined,这个就是false
+    2. 0就是false,1是true
+    3. null跟undefined一样,都是false
+    4. 字符串里面有内容的话才是true,没有内容就是false
+    5. NaN是一种数值类型,已经是false了,只是为了让程序继续往下面走
+    

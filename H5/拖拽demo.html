@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            padding-bottom: 10px;
+        }
+        .box2 {
+
+            position: absolute;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            padding-bottom: 10px;
+        }
+        li{
+            position: relative;
+            width: 100px;
+            height: 30px;
+            list-style: none;
+            background: #abcdef;
+            margin: 10px auto 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="box2"></div>
+    
+    <script>
+        var dragDom ;
+
+        var liList = document.getElementsByTagName("li");
+        for(var i = 0; i< liList.length ; i++){
+            liList[i].setAttribute("draggable",true);
+        }
+        
+        var box2 = document.getElementsByTagName("box2")[0];
+        box2.ondragover = function (e) {
+            e.preventDef]
+            
+        }
+        box2.ondrop = function(e) {
+            box2.appendChild(dragDom);
+            dragDom = null ;
+        }
+    </script>
+</body>
+</html>
