@@ -28,11 +28,14 @@
 // var reg = /^\s+|\s+$/g;
 
 // console.log(typeof NaN);
-let arrayLike  = {
-    0: 'tom',
-    1: '65',
-    2: '男',
-    'length': 3
+// let arrayLike  = {
+//     0: 'tom',
+//     1: '65',
+//     2: '男',
+//     'length': 3
+// }
+// let arr = Array.from(arrayLike);
+// console.log(arr);
+for(var i=0;i<10;i++){
+    setTimeout(console.log(i),0);//0、1、2、3、4、5、6、7、8、9
 }
-let arr = Array.from(arrayLike);
-console.log(arr);

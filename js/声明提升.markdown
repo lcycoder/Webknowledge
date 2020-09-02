@@ -1,0 +1,32 @@
+### 预编译
+* 函数声明整体提升
+* 变量声明提升
+* 未声明的变量直接赋值，则此变量为全局变量所有
+### 预编译四步
+* 创建AO对象 AO{ }
+* 找形参和变量声明，将变量和形参名作为AO属性名，值为undefined  
+AO{  
+    a:undefined  
+    b:undefined  
+}
+* 形参和实参相统一（把实参的值赋予形参名）  
+AO{  
+    a:1  
+    b:undefined   
+    }
+* 找函数声明，值赋予函数体  
+AO{
+   a:function a(){}  
+   b:undefined
+   d:function d(){}
+}
+
+```js
+function fn(a){
+    var a = 123;
+    function a();
+    var b = function(){}
+    function d(){}
+}
+fn(1);
+```

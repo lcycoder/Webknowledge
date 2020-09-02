@@ -6,6 +6,26 @@
 （1）所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。
 （2）主线程之外，还存在一个"任务队列"（task queue）。只要异步任务有了运行结果，就在"任务队列"之中放置一个事件。
 （3）一旦"执行栈"中的所有同步任务执行完毕，系统就会读取"任务队列"，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。
-（4）主线程不断重复上面的第三步。
+（4）主线程不断重复上面的第三步。(主线程从"任务队列"中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为Event Loop（事件循环）。只要主线程空了，就会去读取"任务队列"，这就是JavaScript的运行机制。这个过程会循环反复。)来自https://baijiahao.baidu.com/s?id=1615713540466951098&wfr=spider&for=pc
 
+
+* 一般来说，有以下四种会放入异步任务队列：
+1. setTimeout和setlnterval
+2. DOM事件
+3. ES6中的Promise
+4. Ajax异步请求
+```js
+    for(var i=0;i<10;i++){
+        setTimeout(console.log(i),0); // 会打印0,1,2,3,4,5,6,7,8,9
+        setTimeout(function(){console.log(i);},0); // 打印连续的10个10
+        setTimeout("console.log(i)",1000);//连续的10个10
+
+    }
+```
+![avatar](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4048225711,640979955&fm=173&app=25&f=JPEG?w=640&h=273&s=05926C324B2347244A7504DA000080B2)
+![avatar](https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2413437494,67589961&fm=173&app=25&f=JPEG?w=640&h=416&s=E6B0C56A52B4937C46E9951D000050C2)
 回调函数"（callback），就是那些会被主线程挂起来的代码，前面说的点击事件$(selectot).click(function)中的function就是一个回调函数。异步任务必须指定回调函数，当主线程开始执行异步任务，就是执行对应的回调函数。例如ajax的success，complete，error也都指定了各自的回调函数，这些函数就会加入“任务队列”中，等待执行
+## js执行机制 - 单线程
+* js引擎线程和GUI线程互斥
+js可以操作DOM对象，进而会影响到GUI的渲染结果  
+也就是说当js引擎线程处于运行状态时，GUI渲染线程将处于冻结状态 
