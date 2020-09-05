@@ -29,3 +29,5 @@
 * js引擎线程和GUI线程互斥
 js可以操作DOM对象，进而会影响到GUI的渲染结果  
 也就是说当js引擎线程处于运行状态时，GUI渲染线程将处于冻结状态 
+
+[js执行机制](https://blog.csdn.net/weixin_44030736/article/details/104325523)
