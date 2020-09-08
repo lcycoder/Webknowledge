@@ -11,15 +11,30 @@
     //Person.prototype = {
         constructor:Person;
         __proto__:Object
-
     }（可以将Person中相同的属性提取到prototype中)
-
     function Person(){
-
     }
     var person = new Person();
 
+    
 ```
+```js
+    Person.prototype.name = 'li';
+    var person = new Person();
+    console.log('person.name');//li
+    Person.prototype = { 
+        name:"wang";
+    } 
+    //这里Person.prototype 指向了另一个对象,而现在person的prototype指向还是之前的那个Person.prototype,相当于
+    //var a = {name:1};   
+    //var b=a;  //a和b指向了同一个地址.
+    //a={name:2};这里a改变了指向的地址,但是b没有改变,所以b还是指向原来的那个地址.
+    //console.log(b.name);//b.name=1;因为    
+    console.log('person.name');//li
+    Person.prototype.name = 'wang';
+    console.log('person.name')//'wang';
+```
+
 ### 作用域
 * [[scope]]作用域链
 ```js
