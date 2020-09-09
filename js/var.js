@@ -57,12 +57,16 @@
     // var person2 = new Person();
     // console.log(person2.name)//'wang';
 
-    var div = document.getElementById("divButtons");
-    for( var i=1;i<=10;i++){
-        var button = document.createElement("button");
-        button.innerHTML = "按钮"+i;
-        button.onclick = function(){
-            console.log(i);
-        }
-        div.appendChild(button);
-    }
+    // var div = document.getElementById("divButtons");
+    // for( var i=1;i<=10;i++){
+    //     var button = document.createElement("button");
+    //     button.innerHTML = "按钮"+i;
+    //     button.onclick = function(){
+    //         console.log(i);
+    //     }
+    //     div.appendChild(button);
+    // }
+    var i = ':';
+        var str = `name${i}  
+        李承阳`
+        console.log(str);
