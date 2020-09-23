@@ -44,12 +44,18 @@ System.out.println("Hello, world!");
 
 ___
 
-插入图片  
-开头一个感叹号 !  
-接着一个方括号，里面放上图片的替代文字  
-接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。  
-* 这是一张转义字符的图标  
-![asdf](https://img-blog.csdnimg.cn/20190620200701970.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3Njc0NDM5,size_16,color_FFFFFF,t_70)  
+* 添加图片
+    * 基本格式![Alt text](图片链接 "optional title") <!-- 基本格式 -->
+    开头一个感叹号 !  
+    [] 描述图片的关键字  
+    () 里面放上图片的网址,最后的optional title :鼠标悬停会出现的标题文字,可以不写
+    * 例子: 这是一张转义字符的图标  
+    ![asdf](https://img-blog.csdnimg.cn/20190620200701970.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3Njc0NDM5,size_16,color_FFFFFF,t_70)  
+    * 三种基本方式
+        1. 插入本地图片
+        2. 插入网络图片
+        3. 把图片保存为markdown文件
+            * 把base64工具将图片转化为一串字符串
 
 ***  代表分割线
 ***

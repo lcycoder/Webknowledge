@@ -3,20 +3,18 @@
 * 定义： 原型是function对象的一个属性，定义了构造函数制造出的
 对象 的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。
 * 特点
-    * 利用公有属性， 提取
-    * 
-    * 
+* prototype :   每个函数都有,指向函数的原型对象
+* _proto_ :  每个对象都有,指向该对象的原型.
+* constructor:  每个原型都有,指向关联的构造函数
 ```js
     //Person.prototype 
-    //Person.prototype = {
+    Person.prototype = {
         constructor:Person;
         __proto__:Object
     }（可以将Person中相同的属性提取到prototype中)
     function Person(){
     }
-    var person = new Person();
-
-    
+    var person = new Person();    
 ```
 ```js
     Person.prototype.name = 'li';
@@ -51,3 +49,7 @@ function a(){
 //                          1:AO{}
 //                          2:GO{}  
 ```
+
+
+
+- 
