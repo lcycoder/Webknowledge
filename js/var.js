@@ -66,7 +66,28 @@
     //     }
     //     div.appendChild(button);
     // }
-    var i = ':';
-        var str = `name${i}  
-        李承阳`
-        console.log(str);
+    // var i = ':';
+    //     var str = `name${i}  
+    //     console.log(str);
+
+    function Animal (name) {
+        this.name= name|| 'Animal';
+        this.sleep = function(){
+            console.log(this.name + '正在睡觉!');
+        };
+    }
+    //原型上面的方法:
+    Animal.prototype.eat = function(food){
+        console.log(this.name + '正在吃' + food);
+    }
+
+    原型链继承
+
+    function Dog(){
+
+    }
+    Dog.prototype = new Animal();
+    Dog.prototype.name = 'dog';
+    var dog = new Dog();
+    console.log(dog.name);
+    

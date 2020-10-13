@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Demo"
+		},
+		{
+			"path": "../../../Downloads/JavaScript"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "the-one-master"
+	}
+}

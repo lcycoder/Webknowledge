@@ -24,7 +24,8 @@
 ```
 ![avatar](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4048225711,640979955&fm=173&app=25&f=JPEG?w=640&h=273&s=05926C324B2347244A7504DA000080B2)
 ![avatar](https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2413437494,67589961&fm=173&app=25&f=JPEG?w=640&h=416&s=E6B0C56A52B4937C46E9951D000050C2)
-回调函数"（callback），就是那些会被主线程挂起来的代码，前面说的点击事件$(selectot).click(function)中的function就是一个回调函数。异步任务必须指定回调函数，当主线程开始执行异步任务，就是执行对应的回调函数。例如ajax的success，complete，error也都指定了各自的回调函数，这些函数就会加入“任务队列”中，等待执行
+回调函数"（callback），就是那些会被主线程挂起来的代码，前面说的点击事件$(selectot).click(function)中的funct
+ion就是一个回调函数。异步任务必须指定回调函数，当主线程开始执行异步任务，就是执行对应的回调函数。例如ajax的success，complete，error也都指定了各自的回调函数，这些函数就会加入“任务队列”中，等待执行
 ## js执行机制 - 单线程
 * js引擎线程和GUI线程互斥
 js可以操作DOM对象，进而会影响到GUI的渲染结果  
