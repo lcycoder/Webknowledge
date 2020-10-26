@@ -1,4 +1,4 @@
-#html
+# html
 * hyperText markup language(超文本标记语言)  
 ```html
 <html lang="en"> language english
@@ -10,6 +10,7 @@
     </body>
 </html>
 ```
+# 标签
 * div 
 * span 
 * p 段落
@@ -37,3 +38,15 @@
 <style type=”text/css”>
     @import url（“index.css”）；
 </style>
+
+# html 语义化的理解
+1. 用正确的标签做正确事
+2. 使页面内容结构化,便于浏览器和搜索引擎解析
+3. 在没有css样式渲染下,也可以以一种文档格式显示
+4. 利于SEO
+
+# title和alt的区别
+* alt是图片加载失败后,显示在网页上的替换文字;
+* title是鼠标放到图片上显示的文字
+* alt是必要的属性,title不是
+

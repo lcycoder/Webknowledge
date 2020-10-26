@@ -6,15 +6,8 @@
 * 介绍两种解决方法
     1. 防抖 
     防抖技术是可以把多个顺序地调用合并成一次,也就是一定事件内,规定是事件被触发的次数
-        ```js
-        //简单的防抖动函数
-        function debounce(func,wait,immediate){
-            //定时器定量
-            var timeout
-            return function(){
-                
-            }
-        }
-        ```
     2. 节流
-    
+
+```js
+ 
+```

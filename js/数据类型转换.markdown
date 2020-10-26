@@ -4,27 +4,29 @@
     1. 如果两个值类型相同，再进行三个等号(===)的比较
     2. 如果两个值类型不同，也有可能相等，需根据以下规则进行类型转换在比较：
         1. 如果一个是null，一个是undefined，那么相等
-        2. 如果一个是字符串，一个是数值，把字符串转换成数值之后再进行比较  
+        2. 如果一个是字符串，一个是数值，把字符串转换成数值之后再进行比较 
+        3. boolean和其他类型的值比较的时候,boolean会转换给number后再做比较
     (NaN和任何值都不相等)
 * === 直接严格比较
 ## 强制类型转换
 * Boolean()  
-    1. 没有内容就是undefined,这个就是false
-    2. 0就是false,1是true
-    3. null跟undefined一样,都是false
-    4. 字符串里面有内容的话才是true,没有内容就是false
-    5. NaN是一种数值类型,已经是false了,只是为了让程序继续往下面走
-true:至少有一个字符的字符串, 非零数字,对象,  
-false:空串,0,undefined ,null ,NaN
-* Number()  
-NaN: 对象,undefined,整个字符串不能转换为数字的.  
-比如
-"1.2.3"  
-number()   返回NaN  
-parseInt()  返回1   
-parsefloat() 返回1.2  这俩个都是只转换第一个无效字符之前的字符串
+    1. true:至少有一个字符的字符串, 非零数字,对象,  
+    2. false:空串,0,undefined ,null ,NaN
+     没有内容就是undefined,这个就是false
+     0就是false,1是true
+     null跟undefined一样,都是false
+     字符串里面有内容的话才是true,没有内容就是false
+     NaN是一种数值类型,已经是false了,只是为了让程序继续往下面走
 
-0: null ,false
+* Number()  
+    1. NaN: 对象,undefined,整个字符串不能转换为数字的.  
+    比如
+    "1.2.3"  
+    number()   返回NaN  
+    parseInt()  返回1   
+    parsefloat() 返回1.2  这俩个都是只转换第一个无效字符之前的字符串
+
+    2. 0: null ,false
 
 * String()  
 任何值都能转换为字符串  

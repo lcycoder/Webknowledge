@@ -4,18 +4,25 @@
 * 创建XMLHttpRequest对象 (ie5,6使用ActiveXObject)
 * 向服务器发送请求, 使用XMLHttpReques对象的open()和send()方法
 
-
+# get和post的区别
+* get更简单,更快 ,大部分情况下都能用,
+以下情况只用post
+    1. 无法使用缓存文件(更新服务器上的文件或数据库)
+    2. 向服务器发送大量数据(post没有数据量限制)
+    3. 发送包含未知字符的用户输入时,post比get更稳定和可靠
 
 
 ```js
 var xhr = null;
         if (window.XMLHttpRequest){
             xhr = new XMLHttpRequest();
-        } else {
+        } 
+        else {
         xhr= new ActiveXObject("Microsoft.XMLHttp");
         }
         console.log(xhr.readyState);
-        xhr.open("get","http://developer.duyiedu.com/edu/testAjax");
+        xhr.open("get","http://developer.duyiedu.com/edu/testAjax");//如果open第三个参数传不传，true或者为异步模式，false为同步模式
+
         console.log(xhr.readyState);
         xhr.onreadystatechange = function(){
             //readystate == 4 请求已完成，已经接受到数据
@@ -28,8 +35,7 @@ var xhr = null;
                 alert(xhr.responseText);
             }
         }
-        xhr.send();//如果open第三个参数传不传，true或者为异步模式，false为同步模式
-        //计算机的世界里，异步表示一块进行。
+        xhr.send();//将请求发送到服务器
 
 ```
 
