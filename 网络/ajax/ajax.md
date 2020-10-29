@@ -61,4 +61,44 @@ var xhr = null;
         }
 
     }
+    //封装一个
+    var $={
+        ajax:function (options){
+            var url = options.url;
+            var type = options.type;
+            var dataType = options.dataType;
+            var targetProtocol = "";
+            var targetHost="";
+            //判断是否是相对路径,如果是,则一定是同源的
+            if(url.indexOf("http://")==0||url.indexOf("https://")==0) 
+            {
+                var targetUrl = new URL(url);
+                targetProtocol = targetUrl.protocol;
+                targetHost = targetUrl.host;
+            }
+            else{
+                targetProtocol = location.protocol;  //同源
+                targetHost = location.Host;
+            }
+            if(dataType = " jsonp"){
+                if(targetProtocol ==location.protocol&& targetHost = location.Host)
+                
+                else
+                {
+                   
+                    var callback  = cb+Math.floor(Math.random()*100000);
+                    window[callback] = option.success;
+                    var script = document.createElement("script");
+                    if(.indexOf('?')>0)
+                    script.src = targetProtocol+"&callback"+callback;
+                    else
+                    script.src = targetProtocol+"?callback"+callback;
+                }
+                script.id= callback;
+                document.head.appendchild(script);
+
+                
+            }
+        }
+    }
 ```

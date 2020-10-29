@@ -7,24 +7,6 @@
 </head>
 <body>
     
-    <form method='get'>
-        用户名: <input type="text" name="username" id="username"><br/>
-        密码: <input type="password" name="password" id="password"><br/>
-        <input type="button" value="登录" onclick="login()"> 
-    </form>
-    protected void doGet(HttpServletRequest req,HttpServletRespnse resp) throws Servlet
-    String username = req.getParameter("username");
-    String password = req.getParameter("password");
-    if(username.equals("chai")&&password.equals("123")){
-        resp.getWriter().write("Success");
-    }  else{
-        resp.getWrite().write("Failure");
-    }
-
-    <script>
-        function login(){
-            var username = document.getElementById("username").value;
-        }
-    </script>
+   
 </body>
 </html>
