@@ -34,6 +34,16 @@
         3. Render树变化
         4. 获取元素的某些属性
         5. 元素CSS设置display:none;
+* 下面情况会导致reflow发生
+    1. 改变窗口大小
+    2. 改变文字大小
+    3. 内容的改变，如用户在输入框中敲字
+    4. 激活伪类，如:hover
+    5. 操作class属性
+    6. 脚本操作DOM
+    7. 计算offsetWidth和offsetHeight
+    8. 设置style属性
+
 * 重绘repaint
 当改变某个元素的背景色,文字颜色,边框颜色等不影响周围或者内部布局的属性的时候,屏幕一部分需要重画但是布局没发生变化.
 (减少reflow、repaint触发次数)

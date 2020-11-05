@@ -26,7 +26,7 @@
     number()   返回NaN  
     parseInt()  返回1   
     parsefloat() 返回1.2  这俩个都是只转换第一个无效字符之前的字符串
-
+    
     2. 0: null ,false
 
 * String()  

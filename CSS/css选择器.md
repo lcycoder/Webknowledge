@@ -29,6 +29,7 @@
  * :nth-child(n)
  * :nth-last-child(n)
  * :p:only-child
+ (css3新增选择器)[https://blog.csdn.net/w1418899532/article/details/89434136]
 ![avatar](https://img-blog.csdnimg.cn/2020021916172911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzMDczNg==,size_16,color_FFFFFF,t_70)
 ![avatar](https://img-blog.csdnimg.cn/20200219161650595.png)
 ###伪类和伪元素区别
@@ -41,6 +42,7 @@
 * 利用before伪元素向页面内插入一个文字
 
 ### css定义的权重
+(链接)[https://segmentfault.com/a/1190000012941923]
 * !important 优先级最高,但也会被权重高的important覆盖
 * 行内样式会覆盖外部样式表的任何样式（除！important）
 * 单独使用一个选择器时，不能跨等级使css规则生效
