@@ -43,6 +43,7 @@
 
 ### css定义的权重
 (链接)[https://segmentfault.com/a/1190000012941923]
+https://www.cnblogs.com/cnblogs-jcy/p/8574177.html
 * !important 优先级最高,但也会被权重高的important覆盖
 * 行内样式会覆盖外部样式表的任何样式（除！important）
 * 单独使用一个选择器时，不能跨等级使css规则生效

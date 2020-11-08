@@ -35,9 +35,14 @@
 
 ## css预编译工具
 * styles,sass,less 
+## 创建一个a标签(点击效果)
+(详解链接)[https://blog.csdn.net/wumenglu1018/article/details/54603109?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase]
 
 ##  em 和 rem 
-* 两种都是可灵活拓展的单位,由浏览器转化为像素值,具体取决于设计中字体大小设置
+* em不是固定的,因为相对于文本文字的大小,会继承父级元素字体的大小
+* rem 是css3新增的属性 ,相对于html根元素
+* 
+* 
 如果使用值1em或1rem,可以被浏览器翻译成从16px或160px或其他任意值
 * 二者区别
 当使用em单位时，像素值将是em值乘以使用em单位的元素的字体大小。(依据是font-size)
