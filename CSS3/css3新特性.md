@@ -12,7 +12,7 @@
     1. :first-child / last-child
     2. :nth-child(n)  / nth-last-child(n)
     3. :nth-of-type(n)  / nth-last-of-type(n)     
-    4. :irst-of-type(n)  / last-of-type(n)
+    4. :first-of-type(n)  / last-of-type(n)
     5. :only-child
     6. :empty
 2. 否定选择器  例如ul:not(span){}
