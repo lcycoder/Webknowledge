@@ -40,6 +40,7 @@ function ajax(options){
             }
         }
     }
+    
 }
 
 function formatParams(data){

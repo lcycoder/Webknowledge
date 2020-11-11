@@ -11,7 +11,7 @@
 * 带有src属性的标签 (页面无法处理返回结果)
 * 带有href属性的标签(页面无法处理返回结果)
 * ajax : 既可以用代码控制,页面也不会跳转,后端返回的结果也可以用js继续处理
-
+/Users/lcy/Desktop/the-one-master/网络/ajax/封装.js
 
 
 
