@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <style>
+        
+        html{
+            font-size: 16px;
+        }
+        .title{
+            font-size: 1.2rem;
+        }
+        .sub-title{
+            font-size: 0.8rem;
+        }
+        .content{
+            font-size: 1rem;
+        }
+        .bottom{
+            font-size: 0.8rem;
+        }
+    </style>
+    <style>
+        .contentt{
+            color: red;
+        }
+        div[name="lcy"]{
+            color:black;
+        }
+        div:hover{
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contentt" name="lcy">
+        lcy
+    </div>
+    <ul>
+        <li id="1">小</li>
+        <li id="2">中</li>
+        <li id="3">大</li>
+    </ul>
+    <script>
+        $("li").click(function() {
+       $("li").css({"background":"#d6d5d5"});
+       $(this).css({"background":"#8a6969"});
+       var index = $(this).attr("id");
+       var TextFont;
+       switch (index) {
+           case "1":
+               TextFont = 14;
+               break;
+           case "2":
+               TextFont = 16;
+               break;
+           case "3":
+               TextFont = 18;
+               break;
+           default:
+               TextFont = 16;
+               break;
+       }
+       $("html").css({"font-size":TextFont});
+   })
+
+    </script>
+</body>
+</html>

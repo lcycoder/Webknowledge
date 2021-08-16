@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue生命周期学习</title>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+   {{message}}
+  </div>
+</body>
+<script>
+
+  var vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        message:10
+      }
+    },
+    methods:{ 
+        gett(){
+          return new Date().toLocaleTimeString();
+        },
+    },
+    data() {
+      return {
+        message: 10,
+      }
+    },
+    mounted: function() {
+      console.group('------mounted 挂载结束状态(父）------');
+      console.log("%c%s", "color:red","el     : " + this.$el);
+      console.log(this.$el);
+      console.log("%c%s", "color:red","data   : " + this.$data);
+      console.log("%c%s", "color:red","message: " + this.message);
+ 
+      this.message += 1
+      console.log("%c%s", "color:red","message: " + this.message);
+    },
+    beforeUpdate: function () {
+      console.group('beforeUpdate 更新前状态(父）===============》');
+      console.log("%c%s", "color:red","el     : " + this.$el);
+      console.log(this.$el);
+      console.log("%c%s", "color:red","data: " + this.$data);
+      console.log("%c%s", "color:red","message: " + this.message);
+ 
+    },
+    updated: function () {
+      console.group('updated 更新完成状态(父）===============》');
+      console.log("%c%s", "color:red","el     : " + this.$el);
+      console.log(this.$el);
+      console.log("%c%s", "color:red","data   : " + this.$data);
+      console.log("%c%s", "color:red","message: " + this.message);
+    }
+ 
+  })
+  
+
+</script>
+</html>

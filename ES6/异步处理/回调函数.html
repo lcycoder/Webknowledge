@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
+    <div></div>
     <script>
-        ajax({
-            url:"/data/stedents.json?name=李华",
-            success:function(data){
-                for(let i = 0 ;i<data.length;i++){
-                    if(data[i].name === "李华"){
-                        const cid = data[i].classId;
-                        ajax({
-                            url:"./data/classes.json?id="+cid,
-                            success:function(data){
-                                for(let i = 0;i < data.length ; i++){
-                                    if(data[i].id === cid){
-                                         
-                                    }
-                                }
-                            }
-                        })
-                    }
-                }
-            }
+        function interval(callback,delay=100){
+            let id = setInterval(() => {
+                callback(id);
+            }, delay);
+        }
+        interval(timeId=>{
+            const div = document.querySelector('div');
+            let left = parseInt(window.getComputedStyle(div).left);
+            div.style.left = left + 10+"px";
         })
+        new Promise((resolve,reject)=>{
+            resolve("成功状态");
+            
+        })
+
     </script>
 </body>
 </html>

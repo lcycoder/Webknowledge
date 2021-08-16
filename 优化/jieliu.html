@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="add"></button>
+
+
+    <script>
+        var obtn = document.getElementById("add");
+       function throttle(fn,wait){   ///定时器实现
+           var timer = null;
+           return function(){
+               var cont = this;
+               if(!timer){
+                   timer = setTimeout(function(){
+                        fn.apply(cont,arguments);
+                        timer = null;
+                   },wait);
+               }
+           }
+       }
+        function buy(){
+                console.log(this);
+                console.log("1");
+            }
+        // obtn.onclick = throttle(buy,2000);
+        obtn.onclick = throttle(buy,2000);
+    </script>
+
+
+
+</body>
+</html>

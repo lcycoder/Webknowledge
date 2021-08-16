@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var div = document.createElement('div');
+    document.body.appendChild(div);
+    div.style.width = "100px";
+    div.style.height="100px"
+    div.style.backgroundColor = 'red';  
+    div.style.left="0";
+    div.style.position = "absolute";
+    setInterval(() => {
+        div.style.left = parseInt(div.style.left)+2+'px'; 
+    }, 50);
+    var speed = 1;
+    setInterval(() => {
+        speed +=speed/7;
+        div.style.left = parseInt(div.style.left)+speed+'px';
+    }, 10);
+    </script>
+
+</body>
+</html>

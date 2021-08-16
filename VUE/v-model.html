@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script>
+    const component = {
+       
+        template:'<div><input type="text" @input="handleInput" :value="value"></div>',
+        data(){
+            return {}
+        },
+        props:['value'],
+        methods:{
+            handleInput(e){
+                this.$emit('input',e.target.value)
+            },
+        }
+    }   
+    new Vue({
+        components:{
+            CompOne:component
+        },
+        el:'#root',
+        template:'<comp-one :value1="value" @input="value=arguments[0]"></comp-one>',
+        data(){
+            return {
+                value:'123555'
+            }
+        }
+    })
+</script>
+</html>

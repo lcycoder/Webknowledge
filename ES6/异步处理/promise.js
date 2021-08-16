@@ -1,21 +1,15 @@
-const { resolve } = require("path")
-
-var promise = new Promise(function(resolve,reject){
-    $.ajax({
-        url:'/api/poisearch.json',
-        method:'get',
-        datatype:'json',
-        success:(res)=>{
+export default function getMethods(url){
+    return new Promise(function(resolve,reject){
+        axios.get(url).then(res => {
             resolve(res)
-        },
-        error:(err)=>{
+        }).catch(err=>{
             reject(err)
-        }
+        })
     })
+
+}
+getMethods('/api/xxx').then(res=>{
+    console.log(res)
+},err=>{
+    console.log(err)
 })
-promise.then(function(res){return res.data})
-.then(function(data){return data.result;})
-.then(function(result){console.log(result)});
-promise.then(res=>res.data)
-.then(data=>data.result)
-.then(result=>console.log(result));

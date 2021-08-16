@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            box-sizing: border-box;
+            float: left;
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+        }
+        ul{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li img-date="0"></li>
+        <li img-date="0"></li>
+
+        <li img-date="0"></li>
+
+        <li img-date="0"></li>
+
+        <li img-date="0"></li>
+
+        <li img-date="0"></li>
+
+        <li img-date="0"></li>
+
+    </ul>
+    <script>
+        var ul = document.getElementsByTagName('ul')[0];
+        ul.onmouseover = function(e){
+            var event = e || window.event ;
+            var target = event.target||event.srcElement;
+            target.style.backgroundColor = "rgb(255,255,"+target.getAttribute('img-data')+")";
+            target.setAttribute("img-date",parseInt(target.getAttribute('img-date'))+6);
+
+        }
+    </script>
+</body>
+</html>
